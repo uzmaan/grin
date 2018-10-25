@@ -23,7 +23,8 @@ COPY . .
 RUN cargo build --release
 
 # runtime stage
-FROM debian:9.4
+FROM debian:9.4 
+#import from debian
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y locales openssl
 
